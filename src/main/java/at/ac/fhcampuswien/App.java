@@ -21,5 +21,7 @@ public class App extends Application {
         root.getChildren().add(btn);
         primaryStage.setScene(new Scene(root, 300, 150));
         primaryStage.show();
+
+        System.out.printf("Hallo Adam!");
     }
 }
