@@ -27,6 +27,7 @@ public class App extends Application {
         System.out.println("Na wer sagt es denn");
 
         System.out.println("Hallo Leute, Patrick hier!");
+        System.out.println("Servaaaasss Patrick!!");
 
     }
 }
