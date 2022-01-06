@@ -19,12 +19,14 @@ public class App extends Application {
         btn.setOnAction( (event) -> Platform.exit() );
         Pane root = new StackPane();
         root.getChildren().add(btn);
-        primaryStage.setScene(new Scene(root, 300, 150));
+        primaryStage.setScene(new Scene(root, 500, 500));
         primaryStage.show();
 
-        System.out.printf("Hallo Adam!");
 
 
-        System.out.printf("TEst");
+
+        System.out.println("Letzter Test");
+
+
     }
 }
