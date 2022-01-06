@@ -22,12 +22,9 @@ public class App extends Application {
         primaryStage.setScene(new Scene(root, 300, 150));
         primaryStage.show();
 
-        System.out.println("Hallo Adam!");
-        System.out.println("Hoffentlich klappt's jetzt!!");
-        System.out.println("Na wer sagt es denn");
+        System.out.printf("Hallo Adam!");
 
-        System.out.println("Hallo Leute, Patrick hier!");
-        System.out.println("Servaaaasss Patrick!!");
 
+        System.out.printf("TEst");
     }
 }
