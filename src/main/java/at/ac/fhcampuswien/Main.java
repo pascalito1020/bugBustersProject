@@ -28,12 +28,8 @@ public class Main {
  }
  **/
 
-
         game.createEnemyBoard();
-
-
         game.showEnemyBoard();
-
 
     }
 }
