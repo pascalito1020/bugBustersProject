@@ -60,7 +60,7 @@ public class GameBoard {
 
             switch (choose) {
                 case 'u':
-                    if (y1+1 - shipLength < 0) {
+                    if (y1 + 1 - shipLength < 0) {
                         System.out.println("Cant be placed like that!");
                         playerBoard[y1][x1] = water;
                         break;
@@ -76,7 +76,7 @@ public class GameBoard {
 
                 case 'd':
 
-                    if (y1-1 + shipLength > 9) {
+                    if (y1 - 1 + shipLength > 9) {
                         System.out.println("Cant be placed like that!");
                         playerBoard[y1][x1] = water;
                         break;
@@ -92,13 +92,13 @@ public class GameBoard {
 
                 case 'l':
 
-                    if (x1+1 - shipLength < 0) {
+                    if (x1 + 1 - shipLength < 0) {
                         System.out.println("Cant be placed like that!");
                         playerBoard[y1][x1] = water;
                         break;
                     }
                     for (int i = 0; i < shipLength; i++) {
-                        playerBoard[y1][x1-i] = playerBoard[y1][x1];
+                        playerBoard[y1][x1 - i] = playerBoard[y1][x1];
                     }
 
                     showGameBoard();
@@ -108,14 +108,14 @@ public class GameBoard {
 
                 case 'r':
 
-                    if (x1-1 + shipLength > 9) {
+                    if (x1 - 1 + shipLength > 9) {
                         System.out.println("Cant be placed like that!");
                         playerBoard[y1][x1] = water;
                         break;
                     }
 
                     for (int i = 0; i < shipLength; i++) {
-                        playerBoard[y1][x1+i] = playerBoard[y1][x1];
+                        playerBoard[y1][x1 + i] = playerBoard[y1][x1];
                     }
 
                     showGameBoard();
@@ -264,9 +264,6 @@ public class GameBoard {
 
 
     }
-
-
-
 
 
 }
