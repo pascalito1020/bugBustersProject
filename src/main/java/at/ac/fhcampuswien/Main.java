@@ -6,15 +6,15 @@ public class Main {
     public static void main(String[] args) {
 
         GameBoard game = new GameBoard();
-
-        game.createGameBoard();
-
-        System.out.println("");
-
-        game.placeShips(game.playerBoard);
-
-
 /**
+ game.createGameBoard();
+
+ System.out.println("");
+
+ game.placeShips(game.playerBoard);
+
+
+
  for (int row = 0; row < game.playerBoard.length; row++) {
 
  System.out.println(" ");
@@ -26,8 +26,14 @@ public class Main {
  }
 
  }
-
  **/
+
+
+        game.createEnemyBoard();
+
+
+        game.showEnemyBoard();
+
 
     }
 }
