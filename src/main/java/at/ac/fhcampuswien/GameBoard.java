@@ -1,5 +1,6 @@
 package at.ac.fhcampuswien;
 
+import java.util.Random;
 import java.util.Scanner;
 
 public class GameBoard {
@@ -147,6 +148,124 @@ public class GameBoard {
         System.out.println("");
 
     }
+
+    public void createEnemyBoard() {
+
+        int random1;
+        int random2;
+        int ships = 0;
+
+        Random zufall = new Random();
+
+        while (ships < 1) { /** Schleife für die Erstellung des 1. Schiff  **/
+
+            random1 = zufall.nextInt(9);
+            random2 = zufall.nextInt(9);
+
+
+            if (random1 + 2 > 9) {
+
+                random1 = random1 - 2;
+            }
+
+            for (int i = 0; i < 2; i++) { /** Schleife für Random 2er Schiff**/
+
+                enemyBoard[random1 + i][random2] = ship;
+
+            }
+
+            ships++;
+
+        }
+
+        ships = 0;
+
+        while (ships < 1) {
+
+            random1 = zufall.nextInt(9);
+            random2 = zufall.nextInt(9);
+
+            if (random1 + 5 > 9) {
+
+                random1 = random1 - 5;
+
+            }
+
+            for (int i4 = 0; i4 < 5; i4++) { /** Schleife für Random 5er Schiff**/
+
+                enemyBoard[random1 + i4][random2] = ship;
+
+            }
+
+            ships++;
+
+        }
+
+        ships = 0;
+
+        while (ships <= 1) {
+
+            random1 = zufall.nextInt(9);
+            random2 = zufall.nextInt(9);
+
+            if (random2 - 3 < 0) {
+
+                random2 = random2 + 3;
+            }
+
+
+            for (int i2 = 0; i2 < 3; i2++) { /** Schleife für 2 Random 3er Schiffe**/
+
+
+                enemyBoard[random1][random2 - i2] = ship;
+
+            }
+
+            ships++;
+        }
+
+        ships = 0;
+
+        while (ships < 1) {
+
+            random1 = zufall.nextInt(9);
+            random2 = zufall.nextInt(9);
+
+            if (random2 - 4 < 0) {
+
+                random2 = random2 + 4;
+            }
+            for (int i3 = 0; i3 < 4; i3++) { /** Schleife für Random 4er Schiff**/
+
+                enemyBoard[random1][random2 - i3] = ship;
+
+            }
+
+            ships++;
+
+        }
+
+    }
+
+    public void showEnemyBoard() {
+
+        for (int row = 0; row < enemyBoard.length; row++) {
+
+            System.out.println(" ");
+
+            for (int col = 0; col < enemyBoard.length; col++) {
+
+                System.out.print(enemyBoard[row][col] + " ");
+
+            }
+
+        }
+        System.out.println("");
+
+
+    }
+
+
 
 
 
