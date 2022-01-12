@@ -153,57 +153,43 @@ public class GameBoard {
 
         int random1;
         int random2;
-        int ships = 0;
 
         Random zufall = new Random();
 
-        while (ships < 1) { /** Schleife für die Erstellung des 1. Schiff  **/
-
-            random1 = zufall.nextInt(9);
-            random2 = zufall.nextInt(9);
+        random1 = zufall.nextInt(9); /** Erstellung des 2er Schiffs**/
+        random2 = zufall.nextInt(9);
 
 
-            if (random1 + 2 > 9) {
+        if (random1 + 2 > 9) {
 
-                random1 = random1 - 2;
-            }
+            random1 = random1 - 2;
+        }
 
-            for (int i = 0; i < 2; i++) { /** Schleife für Random 2er Schiff**/
+        for (int i = 0; i < 2; i++) {
 
-                enemyBoard[random1 + i][random2] = ship;
-
-            }
-
-            ships++;
+            enemyBoard[random1 + i][random2] = ship;
 
         }
 
-        ships = 0;
 
-        while (ships < 1) {
+        random1 = zufall.nextInt(9); /** Erstellung des 5er Schiff **/
+        random2 = zufall.nextInt(9);
 
-            random1 = zufall.nextInt(9);
-            random2 = zufall.nextInt(9);
+        if (random1 + 5 > 9) {
 
-            if (random1 + 5 > 9) {
-
-                random1 = random1 - 5;
-
-            }
-
-            for (int i4 = 0; i4 < 5; i4++) { /** Schleife für Random 5er Schiff**/
-
-                enemyBoard[random1 + i4][random2] = ship;
-
-            }
-
-            ships++;
+            random1 = random1 - 5;
 
         }
 
-        ships = 0;
+        for (int i4 = 0; i4 < 5; i4++) {
 
-        while (ships <= 1) {
+            enemyBoard[random1 + i4][random2] = ship;
+
+        }
+
+
+        for (int u = 0; u < 2; u++) { /** Schleife für die Erstellung von 2 3er Schiffe **/
+
 
             random1 = zufall.nextInt(9);
             random2 = zufall.nextInt(9);
@@ -214,34 +200,25 @@ public class GameBoard {
             }
 
 
-            for (int i2 = 0; i2 < 3; i2++) { /** Schleife für 2 Random 3er Schiffe**/
+            for (int i2 = 0; i2 < 3; i2++) {
 
 
                 enemyBoard[random1][random2 - i2] = ship;
 
             }
 
-            ships++;
         }
 
-        ships = 0;
+        random1 = zufall.nextInt(9); /** Erstellung von 4er Schiff **/
+        random2 = zufall.nextInt(9);
 
-        while (ships < 1) {
+        if (random2 - 4 < 0) {
 
-            random1 = zufall.nextInt(9);
-            random2 = zufall.nextInt(9);
+            random2 = random2 + 4;
+        }
+        for (int i3 = 0; i3 < 4; i3++) {
 
-            if (random2 - 4 < 0) {
-
-                random2 = random2 + 4;
-            }
-            for (int i3 = 0; i3 < 4; i3++) { /** Schleife für Random 4er Schiff**/
-
-                enemyBoard[random1][random2 - i3] = ship;
-
-            }
-
-            ships++;
+            enemyBoard[random1][random2 - i3] = ship;
 
         }
 
